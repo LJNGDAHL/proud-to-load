@@ -1,12 +1,8 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
+/**
+ * Proud To Load
+ * Author: Katarina Ljungdahl <jag@katarinaljungdahl.se>
+ * License: MIT
+ */
 
 @keyframes rainbow-color-is-rotating {
  from {
@@ -19,19 +15,26 @@ html, body {
 
 .rainbow {
   width: 160px;
-  height: 160px;
+  height: 80px;
   position: absolute;
-  transform: rotate(45deg);
-  top: 50%;
+  top: calc(50% + 40px);
   left: 50%;
   margin-left: -80px;
   margin-top: -80px;
+  overflow: hidden;
+}
+
+.rainbow-container {
+  width: 160px;
+  height: 160px;
+  transform: rotate(45deg) translateY(1px);
 }
 
 .rainbow-color {
   position: absolute;
   border-radius: 50%;
   border: 10px solid transparent;
+  box-sizing: border-box;
   animation-name: rainbow-color-is-rotating;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
